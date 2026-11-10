@@ -8,5 +8,22 @@ import Layout from '@layouts/Layout.astro';
 <Layout>
     <p>This is a totally normal page with a normal download button.</p>
     <a href="/src/assets/a_totally_normal_file.txt" download>Download</a>
-
+    <img
+    id = "background"
+    src="/src/assets/virus/totally_normal_cat.png"
+    alt="A totally normal cat"
+    fetchpriority="high"
+    />
 </Layout>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: blur(5px);
+	}
+</style>
